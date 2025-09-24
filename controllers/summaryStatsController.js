@@ -16,7 +16,7 @@ export const getSummaryStats = async (req, res) => {
     );
 
     const blockedIps = await query(
-      "SELECT COUNT(*) FROM login_logs WHERE blocked_ip=false AND blocked=false "
+      "SELECT COUNT(*) FROM login_logs WHERE blocked_ip='false' AND blocked=false "
     );
 
     res.status(200).json({
