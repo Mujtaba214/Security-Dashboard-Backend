@@ -20,7 +20,6 @@ export const getSummaryStats = async (req, res) => {
     );
 
     res.status(200).json({
-      totalUsers: Number(totalUsers.rows[0].count),
       totalAdmins: Number(totalAdmins.rows[0].count),
       successfulLogins: Number(successfulLogins.rows[0].count),
       unsuccessfulLogins: Number(unsuccessfulLogins.rows[0].count),
